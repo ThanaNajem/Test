@@ -1,0 +1,68 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: blueviolet;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.handler {
+	position: relative;
+}
+
+.t-tip {
+	background: #1e1e1e;
+	padding: 5px;
+	position: absolute;
+	color: white;
+	border-radius: 4px;
+	top: -20px;
+	left: -30px;
+	/* إخفاء ال tooltip */
+	opacity: 0;
+	transition: 0.3s ease-in-out;
+}
+
+
+/* الكلاس الذيـ يُظهر ال tooltip */
+
+.t-tip.show {
+	top: -40px;
+	opacity: 1;
+	left: 10px;
+}
+
+.test {
+	background: red
+}
+
+
+/* المثلث الذي يظهر اسف ال tooltip */
+
+.t-tip:after {
+	content: "";
+	width: 0;
+	height: 0;
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	border-top: 10px solid #1e1e1e;
+	position: absolute;
+	bottom: -10px;
+	/* لتوسيط المثلث أسف التولتيب */
+	left: 50%;
+	-webkit-transform: translatex(-50%);
+	transform: translatex(-50%);
+}
+
+input {
+	height: 30px;
+	border-radius: 4px;
+	width: 50vw;
+	margin: 20px 0
+}
